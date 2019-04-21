@@ -5,7 +5,6 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.GridLayout;
-import java.awt.Color;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.text.DecimalFormat;
