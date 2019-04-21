@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.GridLayout;
+import java.awt.Color;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.text.DecimalFormat;
@@ -33,25 +34,25 @@ public class Main {
         painel.add(labelTempo);
         
         painel.setLayout(new GridLayout(1, 3));
-        painel.setBounds(10, 0, 600, 50);
+        painel.setBounds(10, 0, 630, 50);
         janela.add(painel);
         
         JButton reiniciar = new JButton("Reiniciar");
         
-        reiniciar.setBounds(200, 50, 100, 30);
+        reiniciar.setBounds(210, 50, 100, 30);
         janela.add(reiniciar);
         
         reiniciar.addActionListener(ActionListener -> {
             janela.remove(jogo);
             jogo = new Jogo();
-            jogo.setBounds(0, 100, 500, 400);
+            jogo.setBounds(10, 100, 500, 400);
             janela.add(jogo);
             tempo = 0;
             incrementa = true;
         });
         
         jogo = new Jogo();
-        jogo.setBounds(0, 100, 500, 400);
+        jogo.setBounds(10, 100, 500, 400);
         janela.add(jogo);
         
         TimerTask taskCronometro = new TimerTask() {
@@ -81,7 +82,7 @@ public class Main {
         };
         timerUpdate.schedule(taskUpdate, 100L, 100L);
         
-        janela.setSize(516, 536);
+        janela.setSize(536, 548);
         janela.setLayout(null);
         janela.setLocationRelativeTo(null);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
